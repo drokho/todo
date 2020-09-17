@@ -48,7 +48,7 @@ export class Todos extends Component  {
             this.setState({newOrder: this.props.todos});
         }
         
-        return <SortableList pressDelay="300" items={this.state.items} onSortEnd={this.onSortEnd} />;
+        return <SortableList pressDelay="300" useWindowAsScrollContainer="true" items={this.state.items} onSortEnd={this.onSortEnd} />;
     }
 
 }

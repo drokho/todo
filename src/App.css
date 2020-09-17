@@ -8,8 +8,10 @@ html {
     background-color: #000;
 }
 
-body {
+body, 
+.todo-input {
     font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 16px;
     line-height: 1.4;
 }
 
@@ -27,7 +29,8 @@ a {
     max-width: 600px;
     min-height: 100vh;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #333;
+    padding-bottom: 30px;
 }
 
 .content {
@@ -147,16 +150,18 @@ body > .todo-li .tools {
 
 @media only screen and (max-width: 500px) {
     .todo-li {
-        padding: 30px 20px;
+        padding: 15px 20px;
     }
 
     .todo-li .title {
         width: 75%;
+        font-size: 18px;
     }
 
     .todo-input {
         flex: 9;
         min-height: 50px;
+        font-size: 18px;
     }
     
     .todo-submit {

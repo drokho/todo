@@ -137,7 +137,7 @@ body > .todo-li .tools {
     display: none;
 }
 
-.completed-true .title {
+.completed-true.editable-false .title span {
     text-decoration: line-through;
 }
 

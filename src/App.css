@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    background-color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    line-height: 1.4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form {
+    padding: 10px;
+    background-color: #ccc;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+    color: #333;
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+    max-width: 600px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #fff;
 }
+
+.content {
+    padding: 20px;
+}
+
+.content p {
+    margin-top: 20px;
+}
+
+.nav-link {
+    color: #00c300;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background: #00c300;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1ddf1d;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+.todo-li {
+    background: #f4f4f4;
+    padding: 10px 20px;
+    border-bottom: 1px #ccc dotted;
+    list-style-type: none;
+}
+
+.todo-li:hover {
+    background-color: gold;
+}
+
+body > .todo-li {
+    margin-left: 10px;
+    background-color: gold;
+    border: 1px solid #ccc dotted;
+    box-shadow: 5px 5px 10px 0px #000;
+
+}
+
+.todo-li .mark-complete {
+    display: block;
+    float: left;
+    margin: 6px 5px 0 0;
+}
+
+.todo-li .title {
+    display: inline-block;
+    width: 80%;
+}
+
+.todo-li .tools {
+    display: none;
+    float: right;
+}
+
+.todo-li:hover .tools,
+body > .todo-li .tools {
+    display: block;
+}
+
+.todo-li button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.todo-li .delete:hover,  {
+    color: red;
+}
+
+.todo-li .edit:hover {
+    color: green;
+}
+
+.editable-true .title {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 5px 12px;
+}
+
+.editable-true .mark-complete {
+    display: none;
+}
+
+.completed-true .title {
+    text-decoration: line-through;
+}
+
+.completed-true.editable-true .title {
+    text-decoration: none;
+}
+
+

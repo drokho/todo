@@ -20,19 +20,18 @@ export class AddTodo extends Component {
         return (
             <form onSubmit={this.onSubmit} style={{display: 'flex'}}>
                 <textarea 
-                    type="text" 
+                    className="todo-input"
                     name="title"
-                    style={{flex: '9', padding: '10px 20px', border: 'none', borderRadius: '0'}}
+                    rows="1"
                     placeholder="Add Todo..." 
                     value={this.state.title}
                     onChange={this.onChange}
                 ></textarea>
 
                 <input 
-                    className="btn"
+                    className="todo-submit"
                     type="submit"
                     value="Submit"
-                    style={{flex: '2'}}
                 />
             </form>
         )

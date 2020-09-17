@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import SaveSharpIcon from '@material-ui/icons/SaveSharp';
 
 export class AddTodo extends Component {
 
@@ -28,11 +29,10 @@ export class AddTodo extends Component {
                     onChange={this.onChange}
                 ></textarea>
 
-                <input 
+                <button 
                     className="todo-submit"
                     type="submit"
-                    value="Submit"
-                />
+                ><SaveSharpIcon className="save" /></button>
             </form>
         )
     }

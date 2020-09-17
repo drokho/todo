@@ -59,6 +59,7 @@ a {
     padding: 10px;
     cursor: pointer;
     flex: 1;
+    font-size: 16px;
 }
 
 .todo-submit:hover {
@@ -97,7 +98,12 @@ body > .todo-li {
 
 .todo-li .title {
     display: inline-block;
-    width: 80%;
+    width: 94%;
+    word-break: break-word;
+}
+
+.todo-li:hover .title {
+    width: 87%;
 }
 
 .todo-li .tools {
@@ -116,11 +122,11 @@ body > .todo-li .tools {
     cursor: pointer;
 }
 
-.todo-li .delete:hover  {
+.todo-li .delete-btn:hover  {
     color: red;
 }
 
-.todo-li .edit:hover {
+.todo-li .edit-btn:hover {
     color: green;
 }
 
@@ -140,6 +146,22 @@ body > .todo-li .tools {
     display: none;
 }
 
+.editable-true .save {
+    display: inital;
+}
+
+.editable-false .save {
+    display: none;
+}
+
+.editable-true .edit {
+    display: none;
+}
+
+.editable-false .edit {
+    display: inital;
+}
+
 .completed-true.editable-false .title span {
     text-decoration: line-through;
 }
@@ -153,7 +175,7 @@ body > .todo-li .tools {
         padding: 15px 20px;
     }
 
-    .todo-li .title {
+    .todo-li:hover .title {
         width: 75%;
         font-size: 18px;
     }
@@ -166,6 +188,7 @@ body > .todo-li .tools {
     
     .todo-submit {
         flex: 2;
+        font-size: 18px;
     }
 
     svg.MuiSvgIcon-root {

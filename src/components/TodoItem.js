@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import DeleteSharpIcon from '@material-ui/icons/DeleteSharp';
 import EditSharpIcon from '@material-ui/icons/EditSharp';
+import SaveSharpIcon from '@material-ui/icons/SaveSharp';
 import ContentEditable from 'react-contenteditable';
+
 
 
 
@@ -48,8 +50,8 @@ export class TodoItem extends Component {
                 
                 </span>
                 <span className="tools">
-                    <button className="edit" onClick={() => this.toggleEditable(id, this.state.html)}><EditSharpIcon /></button>
-                    <button className="delete" onClick={ this.props.deleteTodo.bind(this, id) } ><DeleteSharpIcon /></button>
+                    <button className="edit-btn" onClick={() => this.toggleEditable(id, this.state.html)}><EditSharpIcon className="edit" /><SaveSharpIcon className="save" /></button>
+                    <button className="delete-btn" onClick={ this.props.deleteTodo.bind(this, id) } ><DeleteSharpIcon className="delete" /></button>
                 </span>
                     
             </span>

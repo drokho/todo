@@ -62,7 +62,7 @@ a {
 
 .todo-li {
     background: #f4f4f4;
-    padding: 10px 20px;
+    padding: 30px 20px;
     border-bottom: 1px #ccc dotted;
     list-style-type: none;
 }
@@ -106,7 +106,7 @@ body > .todo-li .tools {
     cursor: pointer;
 }
 
-.todo-li .delete:hover,  {
+.todo-li .delete:hover  {
     color: red;
 }
 
@@ -121,6 +121,11 @@ body > .todo-li .tools {
     padding: 5px 12px;
 }
 
+.title span {
+    display: inline-block;
+    width: 100%;
+}
+
 .editable-true .mark-complete {
     display: none;
 }
@@ -132,5 +137,11 @@ body > .todo-li .tools {
 .completed-true.editable-true .title {
     text-decoration: none;
 }
+
+@media only screen and (max-width: 500px) {
+    body {
+      background-color: lightblue;
+    }
+  }
 
 

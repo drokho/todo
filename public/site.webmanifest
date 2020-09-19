@@ -1,6 +1,6 @@
 {
-   "name":"Todos",
-   "short_name":"Todos",
+   "name":"Tasks",
+   "short_name":"Tasks",
    "icons":[
       {
          "src":"/android-chrome-192x192.png",

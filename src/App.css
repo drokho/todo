@@ -222,7 +222,7 @@ body > .todo-li .tools {
 
 @media only screen and (max-width: 500px) {
     .todo-li {
-        padding: 6px 0 0 0;
+       
         font-size: 18px;
     }
 
@@ -237,9 +237,6 @@ body > .todo-li .tools {
         width: 90%;
     }
 
-    .editable-true .title {
-        padding: 2px 7px;
-    }
 
     .todo-input {
         flex: 9;

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 function Header() {
     return(
         <header style={headerStyle}>
-            <h1>Todo List</h1>
-            <Link className="nav-link" to="/">Home</Link> | <Link className="nav-link" to="/about">About</Link> {/*| <Link className="nav-link" to="/test">Test</Link> */}
+            <h1>Tasks</h1>
+            {/*<Link className="nav-link" to="/">Home</Link> | <Link className="nav-link" to="/about">About</Link> | <Link className="nav-link" to="/test">Test</Link> */}
         </header>
     )
 }

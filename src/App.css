@@ -13,11 +13,16 @@ body,
     font-family: Tahoma, Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.4;
+    background-color: #000;
+}
+
+.todo-input {
+    color: #fff;
 }
 
 form {
-    padding: 10px;
-    background-color: #ccc;
+    padding: 0 10px 10px 10px;
+    background-color: #333;
 }
 
 a {
@@ -26,7 +31,6 @@ a {
 }
 
 .container {
-    max-width: 600px;
     min-height: 100vh;
     margin: 0 auto;
     background-color: #333;
@@ -54,7 +58,7 @@ a {
 .todo-submit {
     display: inline-block;
     border: none;
-    background: #00c300;
+    background: #96b700;
     color: #ffffff;
     padding: 10px;
     cursor: pointer;
@@ -63,7 +67,7 @@ a {
 }
 
 .todo-submit:hover {
-    background: #1ddf1d;
+    background: #777;
 }
 
 *:focus {
@@ -79,12 +83,12 @@ a {
 }
 
 .todo-li:hover {
-    background-color: gold;
+    background-color: #f0f6db;
 }
 
 body > .todo-li {
     margin-left: 0px;
-    background-color: gold;
+    background-color: #f0f6db;
     border: 1px solid #ccc dotted;
     box-shadow: 5px 5px 10px 0px #000;
 
@@ -109,6 +113,7 @@ body > .todo-li {
 .todo-li .tools {
     display: none;
      float: right; 
+     margin-top: 4px;
 }
 
 .todo-li:hover .tools,
@@ -127,14 +132,17 @@ body > .todo-li .tools {
 }
 
 .todo-li .edit-btn:hover {
-    color: green;
+    color: #96b700;
+}
+
+/* .editable-true */.title {
+    border-radius: 5px;
+    padding: 5px 12px;
 }
 
 .editable-true .title {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    padding: 5px 12px;
+    background-color: #000;
+    color: #fff;
 }
 
 .title span {
@@ -186,10 +194,14 @@ body > .todo-li .tools {
     display: inline-block;
 }
 
+.complete-btn {
+    margin-top: 4px;
+}
+
 .drag-handle {
     cursor: row-resize;
 }
-/** experimental **/
+
 .todo-content {
     width: 96%;
     display: inline-block;
@@ -197,18 +209,16 @@ body > .todo-li .tools {
 }
 
 .todo-li {
-    padding:  3px 0 0 0;
+    padding:  3px 0;
 }
 
 .title {
     vertical-align:  top;
 }
 
-.MuiSvgIcon-root.drag-handle {
-    border-left: 1px dotted #ccc;
+.todo-content {
+    border-right: 1px dotted #ccc;
 }
-
-/** end experimental **/
 
 @media only screen and (max-width: 500px) {
     .todo-li {
@@ -225,6 +235,10 @@ body > .todo-li .tools {
 
     .todo-content {
         width: 90%;
+    }
+
+    .editable-true .title {
+        padding: 2px 7px;
     }
 
     .todo-input {

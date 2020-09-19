@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import DeleteSharpIcon from '@material-ui/icons/DeleteSharp';
 import EditSharpIcon from '@material-ui/icons/EditSharp';
 import SaveSharpIcon from '@material-ui/icons/SaveSharp';
+import RadioButtonUncheckedSharpIcon from '@material-ui/icons/RadioButtonUncheckedSharp';
+import CheckCircleSharpIcon from'@material-ui/icons/CheckCircleSharp';
 import ContentEditable from 'react-contenteditable';
 
 
@@ -35,8 +37,12 @@ export class TodoItem extends Component {
         const {id, completed} = this.props.todo;
 
         return (
-            <span className={`completed-${completed} editable-${this.state.editable}`}>
-                <input type="checkbox"  className="mark-complete" defaultChecked={completed ? 'checked' : ''} onChange={this.props.markComplete.bind(this, id)} /> {' '}
+            <span className={`todo-content completed-${completed} editable-${this.state.editable}`}>
+                <button class="complete-btn" onClick={this.props.markComplete.bind(this, id)}>
+                    <RadioButtonUncheckedSharpIcon className="unchecked" />
+                    <CheckCircleSharpIcon className="checked" />
+                </button>
+                {/*<input type="checkbox"  className="mark-complete" defaultChecked={completed ? 'checked' : ''} onChange={this.props.markComplete.bind(this, id)} />*/} {' '}
                 <span className="title">
                 
                 <ContentEditable

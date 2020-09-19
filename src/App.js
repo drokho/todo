@@ -75,7 +75,7 @@ class App extends Component {
 
     // toggle Complete
     markComplete = (id) => {
-
+        console.log(this)
         let newState = { todos: this.state.todos.map(todo => {
             if(todo.id === id) {
                 todo.completed = !todo.completed;
@@ -163,9 +163,9 @@ class App extends Component {
                         <Route exact path="/" render={props => (
                             <React.Fragment>
                                 <AddTodo addTodo={this.addTodo} />
-                                <ul className="todo-list">
+                                
                                     <Todos todos={this.state.todos} markComplete={this.markComplete} deleteTodo={this.deleteTodo} updateTodo={this.updateTodo} reorderTodos={this.reorderTodos.bind(this)} />
-                                </ul>
+                                
                                 
                             </React.Fragment>
                         )} />

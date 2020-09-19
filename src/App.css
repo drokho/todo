@@ -83,7 +83,7 @@ a {
 }
 
 body > .todo-li {
-    margin-left: 10px;
+    margin-left: 0px;
     background-color: gold;
     border: 1px solid #ccc dotted;
     box-shadow: 5px 5px 10px 0px #000;
@@ -92,28 +92,28 @@ body > .todo-li {
 
 .todo-li .mark-complete {
     display: block;
-    float: left;
+    float: left; 
     margin: 6px 5px 0 0;
 }
 
 .todo-li .title {
     display: inline-block;
-    width: 94%;
+    width: 80%; 
     word-break: break-word;
 }
 
 .todo-li:hover .title {
-    width: 87%;
+   width: 80%;
 }
 
 .todo-li .tools {
     display: none;
-    float: right;
+     float: right; 
 }
 
 .todo-li:hover .tools,
 body > .todo-li .tools {
-    display: block;
+    display: block; 
 }
 
 .todo-li button {
@@ -170,14 +170,61 @@ body > .todo-li .tools {
     text-decoration: none;
 }
 
+.completed-false .unchecked {
+    display: inline-block;
+}
+
+.completed-false .checked {
+    display: none;
+}
+
+.completed-true .unchecked {
+    display: none;
+}
+
+.completed-true .checked {
+    display: inline-block;
+}
+
+.drag-handle {
+    cursor: row-resize;
+}
+/** experimental **/
+.todo-content {
+    width: 96%;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.todo-li {
+    padding:  3px 0 0 0;
+}
+
+.title {
+    vertical-align:  top;
+}
+
+.MuiSvgIcon-root.drag-handle {
+    border-left: 1px dotted #ccc;
+}
+
+/** end experimental **/
+
 @media only screen and (max-width: 500px) {
     .todo-li {
-        padding: 15px 20px;
+        padding: 6px 0 0 0;
+        font-size: 18px;
     }
 
+    .todo-li .title, 
     .todo-li:hover .title {
-        width: 75%;
-        font-size: 18px;
+        width: 70%;
+        position: relative;
+        top: 2px;
+    }
+
+    .todo-content {
+        width: 90%;
     }
 
     .todo-input {

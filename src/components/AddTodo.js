@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SaveSharpIcon from '@material-ui/icons/SaveSharp';
+import LibraryAddSharpIcon from '@material-ui/icons/LibraryAddSharp';
 
 export class AddTodo extends Component {
 
@@ -32,7 +32,7 @@ export class AddTodo extends Component {
                 <button 
                     className="todo-submit"
                     type="submit"
-                ><SaveSharpIcon className="save" /></button>
+                ><LibraryAddSharpIcon className="save" /></button>
             </form>
         )
     }

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import TodoItem from './TodoItem';
 import PropTypes from 'prop-types';
-import {SortableContainer, SortableElement} from 'react-sortable-hoc';
+import {SortableContainer, SortableElement, SortableHandle} from 'react-sortable-hoc';
+import DragIndicatorSharpIcon from '@material-ui/icons/DragIndicatorSharp';
 import arrayMove from 'array-move';
 
-const SortableItem = SortableElement(({value}) => <li className="todo-li">{value}</li>);
-
+const SortableItem = SortableElement(({value}) => <li className="todo-li">{value}<DragHandle/></li>);
+const DragHandle = SortableHandle(() => <span><DragIndicatorSharpIcon  className="drag-handle" /></span>);
 const SortableList = SortableContainer(({items}) => {
   return (
-    <ul>
+    <ul className="todo-list">
       {items.map((value, index) => (
         <SortableItem key={`item-${value.key}`} index={index} value={value} />
       ))}
@@ -48,7 +49,7 @@ export class Todos extends Component  {
             this.setState({newOrder: this.props.todos});
         }
         
-        return <SortableList pressDelay="300" useWindowAsScrollContainer="true" items={this.state.items} onSortEnd={this.onSortEnd} />;
+        return <SortableList useDragHandle  useWindowAsScrollContainer="true" items={this.state.items} onSortEnd={this.onSortEnd} />;
     }
 
 }

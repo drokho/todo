@@ -200,7 +200,7 @@ body > .todo-li .tools {
 .drag-handle {
     cursor: row-resize;
 }
-
+/**/
 .todo-content {
     width: 95%;
     display: inline-block;

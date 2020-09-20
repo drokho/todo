@@ -16,6 +16,6 @@
    "theme_color":"#333333",
    "background_color":"#333333",
    "display":"fullscreen",
-   "start_url": "/",
+   "start_url": "/app/bin",
    "scope": "."
 }

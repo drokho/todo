@@ -1,0 +1,4 @@
+Name: Tasks
+domain: dev-bftghue8.us.auth0.com
+Client ID: 8RY64mMzqF7b0lzcVwFzAdHEvgosIH7z
+Client Secret: nJE52e27gey2dynjP5TFrEvccmcT_wrXbEulX62vgX_DXU8ZIcG589fCao13XXLI

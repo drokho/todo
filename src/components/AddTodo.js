@@ -5,27 +5,29 @@ import LibraryAddSharpIcon from '@material-ui/icons/LibraryAddSharp';
 export class AddTodo extends Component {
 
     state = {
-        title: ''
+        title: '',
+        description: ''
     }
 
     onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.addTodo(this.state.title);
+        this.props.addTodo(this.state.title, 'Add a description...');
         this.setState({title: ''});
+        this.setState({description: ''});
 
     }
 
     render() {
         return (
-            <form onSubmit={this.onSubmit} style={{display: 'flex'}}>
+            <form className="add-todo" onSubmit={this.onSubmit} style={{display: 'flex'}}>
                 <input
                     type="text"
                     className="todo-input"
                     name="title"
                     rows="1"
-                    placeholder="Add Todo..." 
+                    placeholder="Add Task..." 
                     value={this.state.title}
                     onChange={this.onChange}
                 />
